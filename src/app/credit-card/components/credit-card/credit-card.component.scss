@@ -1,0 +1,33 @@
+.credit-card-container {
+  background: linear-gradient(to right, #f09433, #e6683c);
+  border-radius: 8px;
+  height: 230px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+
+  input {
+    font: {
+      family: inherit;
+      size: 16px;
+    }
+    letter-spacing: 2px;
+    border-radius: 3px;
+    border: none;
+    bottom: 13%;
+    left: 0;
+    margin: 0 auto;
+    outline: 0;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    width: 40%;
+    opacity: 0.6;
+
+    &:first-of-type {
+      bottom: 35%;
+      font-size: 20px;
+      width: 90%;
+    }
+  }
+}

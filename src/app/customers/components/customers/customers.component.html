@@ -1,0 +1,28 @@
+<div
+  class="customers-container"
+  [ngClass]="{
+    'light-theme': !(darkTheme$ | async),
+    'dark-theme': (darkTheme$ | async)
+  }"
+>
+  <h2>Component A</h2>
+
+  <div class="customers-title-container">
+    <h4>Customers</h4>
+  </div>
+  <div
+    class="customer-container"
+    *ngFor="let customer of customers"
+    [ngStyle]="{
+      'background-color': customer.isActive
+        ? 'rgb(245, 245, 245)'
+        : 'rgb(233, 231, 231)'
+    }"
+  >
+    <p class="id">{{ customer.id }}</p>
+    <p class="name-link" (click)="sendCustomerInformation(customer)">
+      {{ customer.name }}
+    </p>
+    <p class="email">{{ customer.email }}</p>
+  </div>
+</div>

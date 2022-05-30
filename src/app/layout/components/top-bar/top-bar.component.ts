@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { ObservableService } from './core/services/observable.service';
+import { ObservableService } from 'src/app/core/services/observable.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-top-bar',
+  templateUrl: './top-bar.component.html',
+  styleUrls: ['./top-bar.component.scss'],
 })
-export class AppComponent implements OnInit {
-  title = 'ang-practice';
+export class TopBarComponent implements OnInit {
   darkTheme$: Observable<boolean> = of(false);
 
   constructor(private observableService: ObservableService) {}

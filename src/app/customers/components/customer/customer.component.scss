@@ -1,0 +1,57 @@
+@import "mixins.scss";
+@import "colors.scss";
+
+.customer-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 14px 5px rgba(0, 0, 0, 0.1);
+  min-width: 410px;
+  padding: 15px;
+  width: 100%;
+
+  h2 {
+    text-align: center;
+  }
+
+  .customer-details {
+    margin-top: 15px;
+
+    p {
+      font-size: 14px;
+      margin-bottom: 10px;
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  button {
+    border-radius: 4px;
+    border: none;
+    font-family: inherit;
+    margin-top: 15px;
+    padding: 7px 20px;
+    transition: background-color 0.1s ease-in;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.dark-theme {
+  @include theme($secondary-dark-blue, $white);
+
+  button {
+    @include theme($white, $dark-blue);
+  }
+}
+
+.light-theme {
+  @include theme(white, $black);
+
+  button {
+    @include theme($dark-blue, $white);
+  }
+}

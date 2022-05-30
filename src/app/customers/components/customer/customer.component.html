@@ -1,0 +1,17 @@
+<div
+  class="customer-container"
+  [ngClass]="{
+    'light-theme': !(darkTheme$ | async),
+    'dark-theme': (darkTheme$ | async)
+  }"
+>
+  <h2>Customer Details</h2>
+
+  <div class="customer-details">
+    <p><span>Customer Name: </span>{{ customer.name }}</p>
+    <p><span>Email: </span>{{ customer.email }}</p>
+    <p><span>Phone: </span>{{ customer.phone }}</p>
+  </div>
+
+  <button (click)="changeTheme()" class="button">Change Theme</button>
+</div>

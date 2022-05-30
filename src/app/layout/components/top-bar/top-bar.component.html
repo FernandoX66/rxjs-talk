@@ -1,0 +1,12 @@
+<div
+  class="top-bar-container"
+  [ngClass]="{
+    'light-theme': !(darkTheme$ | async),
+    'dark-theme': (darkTheme$ | async)
+  }"
+>
+  <div class="container">
+    <p>ARTIC <span>store&copy;</span></p>
+    <button class="button">Logged Out</button>
+  </div>
+</div>

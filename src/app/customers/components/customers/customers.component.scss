@@ -1,0 +1,78 @@
+@import "mixins.scss";
+@import "colors.scss";
+
+.customers-container {
+  border-radius: 8px;
+  box-shadow: 0 0 14px 5px rgba(0, 0, 0, 0.1);
+  min-width: 410px;
+  width: 100%;
+  padding: 15px;
+
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .customers-title-container {
+    padding: 13px 0;
+    background-color: rgb(116, 116, 116);
+    border-radius: 7px 7px 0 0;
+    color: white;
+
+    h4 {
+      text-align: center;
+    }
+  }
+
+  .customer-container {
+    color: black;
+    padding: 8px 15px;
+    position: relative;
+    font-size: 15px;
+    transition: transform 0.1s ease-in;
+
+    &:hover {
+      transform: scaleX(1.02);
+    }
+
+    p {
+      margin-bottom: 3px;
+    }
+
+    .id {
+      background-color: white;
+      color: rgb(45, 73, 184);
+      border-radius: 6px;
+      text-align: center;
+      display: inline-block;
+      padding: 1px 6px;
+      font-weight: bold;
+      position: absolute;
+      right: 5px;
+    }
+
+    .name-link {
+      cursor: pointer;
+      display: inline-block;
+      color: rgb(62, 84, 191);
+      font-weight: 600;
+      transition: color 0.1s ease-in;
+
+      &:hover {
+        color: rgb(133, 147, 212);
+      }
+    }
+
+    .email {
+      font-size: 13px;
+    }
+  }
+}
+
+.dark-theme {
+  @include theme($secondary-dark-blue, $white);
+}
+
+.light-theme {
+  @include theme($white, $black);
+}

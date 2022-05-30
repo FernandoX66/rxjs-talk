@@ -1,0 +1,25 @@
+@import "mixins";
+@import "colors";
+
+.container {
+  height: 100vh;
+
+  .container-w {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .content-container {
+    display: flex;
+    padding: 40px 10px 10px 10px;
+    gap: 20px;
+  }
+}
+
+.dark-theme {
+  @include theme(rgba(41, 44, 85, 0.88), $white);
+}
+
+.light-theme {
+  @include theme($azure, $black);
+}

@@ -1,0 +1,54 @@
+@import "mixins.scss";
+@import "colors.scss";
+
+.top-bar-container {
+  box-shadow: 0 0 16px 1px rgb(0 0 0 / 27%);
+  width: 100%;
+
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+
+  p {
+    font-size: 22px;
+    font-weight: 600;
+
+    span {
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+
+  button {
+    border: none;
+    font-family: inherit;
+    padding: 7px 20px;
+    border-radius: 4px;
+    transition: background-color 0.1s ease-in;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.light-theme {
+  @include theme($grey, $dark-blue);
+
+  button {
+    @include theme($dark-blue, $grey);
+  }
+}
+
+.dark-theme {
+  @include theme($dark-blue, $grey);
+
+  button {
+    @include theme($grey, $dark-blue);
+  }
+}
